@@ -11,9 +11,9 @@ import { DetailComponent } from './detail/detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const appRoutes: Routes = [
-  { path: '/', component: HomeComponent },
-  { path: '/pokemon', component: ListComponent },
-  { path: '/pokemon/:id', component: DetailComponent },
+  { path: '', component: HomeComponent },
+  { path: 'pokemon', component: ListComponent },
+  { path: 'pokemon/:id', component: DetailComponent },
 
   { path: '**', component: NotFoundComponent }
 ];
