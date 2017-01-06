@@ -8,6 +8,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailComponent implements OnInit {
 
+  captured = false;
+
   constructor(
       private  route: ActivatedRoute
   ) { }
@@ -15,6 +17,18 @@ export class DetailComponent implements OnInit {
   ngOnInit() {
     let id = this.route.snapshot.params['id'];
     //add here a fetch pokemon data function
+  }
+
+  isCaptured() {
+    return this.captured;
+  }
+
+  capture() {
+    this.captured = true;
+  }
+
+  release() {
+    this.captured = false;
   }
 
 }

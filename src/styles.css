@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+	margin: 0;
+}
+h2 {
+	text-align: center;
+}
+md-sidenav-layout {
+	min-height: 45em;
+}
+md-card {
+	width: 40%;
+	margin: auto;
+    margin-bottom: 20px;
+}
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';

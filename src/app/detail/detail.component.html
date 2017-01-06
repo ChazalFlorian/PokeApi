@@ -1,3 +1,13 @@
-<p>
-  detail works!
-</p>
+<h2>Pikachu</h2>
+<md-card>
+	<md-card-title>Pikachu</md-card-title>   
+	<md-card-content>
+	    <p>Types: éclair, souris, jaune</p>
+	    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+	    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+	</md-card-content>
+	<md-card-actions>
+	    <button md-button *ngIf="!isCaptured()" (click)="capture()">Capture</button>
+	    <button md-button *ngIf="isCaptured()" (click)="release()">Release</button>
+	</md-card-actions>
+</md-card>

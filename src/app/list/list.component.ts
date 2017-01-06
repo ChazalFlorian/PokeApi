@@ -7,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+	title = 'PokeApp - Liste des Pokemons';
 
-  ngOnInit() {
-  }
+	constructor() { }
+
+	ngOnInit() {
+	}
 
 }
