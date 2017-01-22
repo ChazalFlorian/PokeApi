@@ -1,47 +1,14 @@
 <div>
 	<h2>{{ title }}</h2>
-	<md-card>
-		<md-card-title>Pikachu</md-card-title>   
-		<md-card-content>
-		    <p>Types: éclair, souris, jaune</p>
-		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-		    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
-		</md-card-content>
-		<md-card-actions>
-		    <button md-button [routerLink]="['/pokemon/1']">VIEW</button>
-		</md-card-actions>
-	</md-card>
-	<md-card>
-		<md-card-title>Pikachu</md-card-title>   
-		<md-card-content>
-		    <p>Types: éclair, souris, jaune</p>
-		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-		    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
-		</md-card-content>
-		<md-card-actions>
-		    <button md-button [routerLink]="['/pokemon/1']">VIEW</button>
-		</md-card-actions>
-	</md-card>
-	<md-card>
-		<md-card-title>Pikachu</md-card-title>   
-		<md-card-content>
-		    <p>Types: éclair, souris, jaune</p>
-		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-		    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
-		</md-card-content>
-		<md-card-actions>
-		    <button md-button [routerLink]="['/pokemon/1']">VIEW</button>
-		</md-card-actions>
-	</md-card>
-	<md-card>
-		<md-card-title>Pikachu</md-card-title>   
-		<md-card-content>
-		    <p>Types: éclair, souris, jaune</p>
-		    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-		    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
-		</md-card-content>
-		<md-card-actions>
-		    <button md-button [routerLink]="['/pokemon/1']">VIEW</button>
-		</md-card-actions>
+	<md-card *ngFor="let pokemon of pokemons; let i = index;">
+		<md-card-header>
+			<img md-card-avatar (error)="pokemon.image = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png'" [src]="pokemon.image">
+			<md-card-title>#{{pokemon.id}}</md-card-title>
+			<md-card-subtitle>
+				<a [routerLink]="['/pokemon', pokemon.id]" routerLinkActive="active">{{pokemon.name | uppercase}}</a></md-card-subtitle>
+		</md-card-header>
+		<button md-icon-button (click)="pokemon.toChoosen()">
+			<md-icon class="md-24">favorite</md-icon>
+		</button>
 	</md-card>
 </div>
